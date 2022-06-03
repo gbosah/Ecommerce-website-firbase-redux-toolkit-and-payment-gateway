@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Cedarville+Cursive:regular);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { 
+    scroll-behavior: smooth;
+  }
+
+.cursive {
+    font-family: "Amatic SC", cursive;
+    font-weight: 400;
+}
+
+.nav-bar {
+    
+}
+
+
+* {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+      
+    body {
+        @apply font-[poppins]
+    }
+
+    h1 {
+        @apply text-2xl font-bold capitalize
+    }
+
+}
