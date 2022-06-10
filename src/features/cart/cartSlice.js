@@ -61,7 +61,6 @@ const cartSlice = createSlice({
             const itemList = {payload};
             state.cartItems = state.cartItems.forEach((items) => items.id === itemList)
             return state
-            console.log(itemList);
         }
     }
 });
