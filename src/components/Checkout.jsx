@@ -12,7 +12,7 @@ const Checkout = () => {
   const { cartItems, total } = useSelector((state) => state.cart);
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const formik = useFormik({
     initialValues: {
@@ -51,9 +51,8 @@ const Checkout = () => {
     onSubmit: async (values) => {
       await new Promise((r) => setTimeout(r, 500));
       console.log(JSON.stringify(values, null, 2));
-      dispatch(form(values))
+      dispatch(form(values));
       navigate("/payment");
-      
     },
   });
 
@@ -61,8 +60,6 @@ const Checkout = () => {
     formik;
 
   useEffect(() => {}, [values]);
-
-  const { order } = useSelector((state) => state.order);
 
   return (
     <form
@@ -229,7 +226,10 @@ const Checkout = () => {
           />
         </div>
         <div className="hidden md:block space-x-5">
-          <button type="submit" className="mt-4 px-2 md:px-16 py-4 bg-blue-500 hover:bg-blue-400 rounded-3xl">
+          <button
+            type="submit"
+            className="mt-4 px-2 md:px-16 py-4 bg-blue-500 hover:bg-blue-400 rounded-3xl"
+          >
             Place order
           </button>
           <Link
@@ -279,7 +279,10 @@ const Checkout = () => {
         </div>
       </div>
       <div className="space-x-5 md:hidden">
-        <button type="submit" className="mt-4 px-2 md:px-16 py-4 bg-blue-500 hover:bg-blue-400 rounded-3xl">
+        <button
+          type="submit"
+          className="mt-4 px-2 md:px-16 py-4 bg-blue-500 hover:bg-blue-400 rounded-3xl"
+        >
           Place order
         </button>
         <Link

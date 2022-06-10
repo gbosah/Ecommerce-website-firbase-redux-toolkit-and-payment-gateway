@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(()=> {
     dispatch(getCartItems())
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     dispatch(calculateTotal())
@@ -49,7 +49,7 @@ const App = () => {
       
        }
     });
-  }, []);
+  }, [dispatch]);
 
   const { isOpen } = useSelector((state) => state.modal)
   const { isLoading } = useSelector((state) => state.product);

@@ -60,10 +60,10 @@ const Footer = () => {
            </div>
         </div>
         <div className='w-full flex justify-center mt-4 space-x-10'>
-            <a href=""><FaFacebook  size={25} /></a>
-            <a href=""><FaInstagram size={25} /></a>
-            <a href=""><FaTwitter   size={25} /></a>
-            <a href=""><FaYoutube   size={25} /></a>
+            <a href="/"><FaFacebook  size={25} /></a>
+            <a href="/"><FaInstagram size={25} /></a>
+            <a href="/"><FaTwitter   size={25} /></a>
+            <a href="/"><FaYoutube   size={25} /></a>
         </div>
         <div className='w-full flex justify-center text-center mt-6'>
             <BiCopyright className='mt-1' /> <span className='pl-1'>PhoneLove - {new Date().getFullYear()}. All Rights Reserved</span>

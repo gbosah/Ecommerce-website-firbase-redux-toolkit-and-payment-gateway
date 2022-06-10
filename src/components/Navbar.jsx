@@ -42,7 +42,7 @@ const Navbar = () => {
         window.removeEventListener('scroll', controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  }, [lastScrollY, controlNavbar]);
 
 
 
@@ -51,7 +51,6 @@ const {amount} = useSelector((state) => state.cart)
 const [nav, setNav] = useState(false);
 
 const handleClick = () => setNav(!nav)
-const closeClick = () => setNav(false)
 
 
 
@@ -147,16 +146,16 @@ useEffect(() => {
                 <p className='text-xl font-bold'>Log in</p>
              </div>
                  <div className='flex space-x-5 text-2xl' >
-                 <a href="">
+                 <a href="/">
                  <FaFacebook />
                  </a>
-                 <a href="">
+                 <a href="/">
                  <FaTwitter />
                  </a>
-                 <a href="">
+                 <a href="/">
                  <FaInstagram />
                  </a>
-                 <a href="">
+                 <a href="/">
                  <FaYoutube />
                  </a>
                  </div>
