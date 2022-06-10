@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate} from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs'
-import { increment, decrement, remove, addCart } from "../features/cart/cartSlice";
+import { increment, decrement, remove } from "../features/cart/cartSlice";
 import { RiDeleteBin2Line } from "react-icons/ri";
 
 const CartContainer = () => {

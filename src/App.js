@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import "@stripe/stripe-js";
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContainer from './components/CartContainer';
@@ -19,6 +20,7 @@ import CartItem from './components/CartItem';
 import Reset from './components/Reset';
 import ResetMessage from './components/ResetMessage';
 import Checkout from './components/Checkout';
+import { Payment } from './components/Payment';
 
 const App = () => {
 
@@ -70,13 +72,19 @@ const App = () => {
          <Route path='/signin' element={<SignIn />} />
          <Route path='/signup' element={<SignUp />} />
          <Route path='/reset' element={<Reset />} />
-         <Route path='/checkout' element={<Checkout />} />
+         <Route path='/payment' element={<Payment />} />
          <Route path='/resetinfo' element={<ResetMessage />} />
          <Route path='/accountlogin' element={ <ProtectedRoute>
                                                <AccountLogin />
                                                </ProtectedRoute>
                                               } 
                                               />
+         <Route path='/checkout' element={ <ProtectedRoute>
+                                               <Checkout />
+                                               </ProtectedRoute>
+                                              } 
+                                              />
+          
        </Routes>
        <div><Footer /> </div>
     </BrowserRouter>

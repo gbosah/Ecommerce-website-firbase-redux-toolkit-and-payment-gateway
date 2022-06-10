@@ -56,10 +56,16 @@ const cartSlice = createSlice({
             });
             state.amount = amount
             state.total = total
+        },
+        addCheckout: (state, {payload}) => {
+            const itemList = {payload};
+            state.cartItems = state.cartItems.forEach((items) => items.id === itemList)
+            return state
+            console.log(itemList);
         }
     }
 });
 
-export const { addCart, increment, decrement, remove, calculateTotal } = cartSlice.actions;
+export const { addCart, increment, decrement, remove, calculateTotal, addCheckout } = cartSlice.actions;
 
 export default cartSlice.reducer;
