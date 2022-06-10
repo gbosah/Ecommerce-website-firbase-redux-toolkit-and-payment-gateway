@@ -36,7 +36,7 @@ const Navbar = () => {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  },);
 
   const { amount } = useSelector((state) => state.cart);
 
